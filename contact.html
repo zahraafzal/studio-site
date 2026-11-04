@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Aurevia Studio</title>
+  <meta name="description" content="Tell us about your project, book a free call or message us on WhatsApp. We reply within 24 hours.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- ye page folder ke bahar nahi, isi folder mein hai, is liye "../" nahi -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h2><a href="index.html" style="color:inherit;text-decoration:none">Aurevia Studio</a></h2>
+    <button class="menu-button" id="menu-button" aria-label="Open menu">☰</button>
+    <nav id="menu">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Contact</p>
+      <h1>Let's talk about your project</h1>
+      <p class="page-lead">We reply within 24 hours.</p>
+    </section>
+
+    <section class="contact-page">
+
+      <!-- BAAYEN TARAF: FORM -->
+      <!-- REPLACE: YOUR_FORM_ID ki jagah Formspree wali apni ID -->
+      <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+        <label for="c-name">Name</label>
+        <input type="text" id="c-name" name="name" required>
+
+        <label for="c-email">Email</label>
+        <input type="email" id="c-email" name="email" required>
+
+        <label for="c-service">Service</label>
+        <select id="c-service" name="service">
+          <option>YouTube Complete Edit Package</option>
+          <option>Content Management</option>
+          <option>Personal Branding</option>
+          <option>Web Development</option>
+        </select>
+
+        <label for="c-budget">Budget</label>
+        <select id="c-budget" name="budget">
+          <option>Under $100</option>
+          <option>$100 - $500</option>
+          <option>$500 - $1,500</option>
+          <option>$1,500+</option>
+        </select>
+
+        <label for="c-message">Message</label>
+        <textarea id="c-message" name="message" rows="4" required></textarea>
+
+        <!-- SPAM SE BACHAO: insaan ko ye nazar nahi aata, spam bots ise bhar dete hain -->
+        <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off">
+
+        <button type="submit" class="button" id="send-button">Send message</button>
+        <p class="form-note" id="form-note" role="status"></p>
+      </form>
+
+      <!-- DAAYEN TARAF: CALENDLY AUR LINKS -->
+      <div class="contact-side">
+
+        <div class="side-box">
+          <h3>Book a free call</h3>
+          <p>Pick a time that suits you.</p>
+          <!-- REPLACE: Calendly ka asli link banne par neeche wali iframe ko chalu karein
+               (comment hata dein) aur button hata dein:
+          <iframe src="https://calendly.com/YOUR-NAME/30min" title="Book a call" style="width:100%;height:600px;border:0;border-radius:12px"></iframe>
+          -->
+          <a href="https://calendly.com/YOUR-NAME/30min" target="_blank" class="button">Open booking calendar</a>
+        </div>
+
+        <div class="side-box">
+          <h3>Other ways to reach us</h3>
+          <ul class="side-links">
+            <!-- REPLACE: apna number, email aur social links -->
+            <li><a href="https://wa.me/92XXXXXXXXXX" target="_blank">WhatsApp</a></li>
+            <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+            <li><a href="#" target="_blank">Instagram</a></li>
+            <li><a href="#" target="_blank">YouTube</a></li>
+            <li><a href="#" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <h3>Aurevia Studio</h3>
+    <nav>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <small>© 2026 Aurevia Studio. All rights reserved.</small>
+  </footer>
+
+  <script src="page.js"></script>
+
+  <!-- FORM BHEJNE WALA CHHOTA SCRIPT -->
+  <script>
+    const form = document.getElementById("contact-form");
+    const note = document.getElementById("form-note");
+    const sendButton = document.getElementById("send-button");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();   // page ko khud reload hone se roko
+
+      // agar Formspree ID abhi nahi lagayi, to bata do aur ruk jao
+      if (form.action.includes(abcd1234)) {
+        note.textContent = "Demo mode: add your Formspree ID in contact.html to receive messages.";
+        return;
+      }
+
+      sendButton.disabled = true;
+      note.textContent = "Sending...";
+
+      // data Formspree ko bhejo
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      })
+        .then(function (response) {
+          if (response.ok) {
+            window.location.href = "thank-you.html";   // kamyabi: thank-you page
+          } else {
+            note.textContent = "Something went wrong. Please try again or use WhatsApp.";
+            sendButton.disabled = false;
+          }
+        })
+        .catch(function () {
+          note.textContent = "Network error. Please try again or use WhatsApp.";
+          sendButton.disabled = false;
+        });
+    });
+  </script>
+</body>
+</html>

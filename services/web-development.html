@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Development | Aurevia Studio</title>
+  <meta name="description" content="Portfolio, business, landing page and e-commerce websites. Get an instant price range.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <!-- HEADER (har page par wahi) -->
+  <header>
+    <h2><a href="../index.html" style="color:inherit;text-decoration:none">Aurevia Studio</a></h2>
+    <button class="menu-button" id="menu-button" aria-label="Open menu">☰</button>
+    <nav id="menu">
+      <a href="../index.html#services">Services</a>
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#pricing">Pricing</a>
+      <a href="../index.html#faq">FAQ</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- PAGE TITLE -->
+    <section class="page-hero">
+      <p class="eyebrow">Web Development</p>
+      <h1>Websites that bring you customers</h1>
+      <p class="page-lead">Design, build, CMS setup, SEO basics and handover training, all in one project.</p>
+      <a href="#calculator" class="button">Get a price range</a>
+    </section>
+
+    <!-- PROJECT TYPES -->
+    <section class="niche-section">
+      <h2>What we build</h2>
+      <div class="cards">
+        <div class="card"><h3>Portfolio</h3><p>Show your best work in a clean, fast site.</p></div>
+        <div class="card"><h3>Business site</h3><p>Services, about and contact pages that build trust.</p></div>
+        <div class="card"><h3>Landing page</h3><p>One focused page built to get sign-ups or orders.</p></div>
+        <div class="card"><h3>E-commerce</h3><p>An online store with products, cart and checkout.</p></div>
+        <div class="card"><h3>Web app</h3><p>Custom tools, dashboards and portals.</p></div>
+        <div class="card"><h3>Redesign</h3><p>Give your old website a modern, faster look.</p></div>
+      </div>
+    </section>
+
+    <!-- PRICE RANGE CALCULATOR (REPLACE: numbers script ke andar badlein) -->
+    <section class="quote-section" id="calculator">
+      <h2>Get a price range</h2>
+
+      <div class="quote-box">
+        <label for="wd-pages">Number of pages</label>
+        <input type="number" id="wd-pages" min="1" max="30" value="5">
+
+        <p class="addons-title">Features</p>
+        <label class="check"><input type="checkbox" class="wd-feature" value="150"> Blog</label>
+        <label class="check"><input type="checkbox" class="wd-feature" value="200"> Booking system</label>
+        <label class="check"><input type="checkbox" class="wd-feature" value="300"> Online payments</label>
+        <label class="check"><input type="checkbox" class="wd-feature" value="250"> Multiple languages</label>
+        <label class="check"><input type="checkbox" class="wd-feature" value="200"> Easy-edit CMS</label>
+
+        <label for="wd-design">Design level</label>
+        <select id="wd-design">
+          <option value="1">Clean and simple</option>
+          <option value="1.4" selected>Custom design</option>
+          <option value="1.8">Premium design with animations</option>
+        </select>
+
+        <label for="wd-timeline">Timeline</label>
+        <select id="wd-timeline">
+          <option value="1" selected>Standard (3-4 weeks)</option>
+          <option value="1.25">Fast (1-2 weeks)</option>
+        </select>
+
+        <div class="total">
+          <span>Estimated range</span>
+          <strong id="wd-total">$0</strong>
+        </div>
+
+        <a href="../index.html#contact" class="button">Request a proposal</a>
+      </div>
+    </section>
+
+    <!-- MAINTENANCE PLANS (REPLACE: prices placeholders hain) -->
+    <section class="pricing-section">
+      <h2>Maintenance plans</h2>
+      <div class="price-grid">
+        <div class="price-card">
+          <h3>Basic</h3>
+          <p class="price">$29<small>/mo</small></p> <!-- REPLACE: price -->
+          <ul><li>Hosting</li><li>Backups</li><li>Security updates</li></ul>
+        </div>
+        <div class="price-card popular">
+          <span class="badge">Most Popular</span>
+          <h3>Standard</h3>
+          <p class="price">$79<small>/mo</small></p> <!-- REPLACE: price -->
+          <ul><li>Everything in Basic</li><li>2 hours of changes</li><li>Priority support</li></ul>
+        </div>
+        <div class="price-card">
+          <h3>Pro</h3>
+          <p class="price">$149<small>/mo</small></p> <!-- REPLACE: price -->
+          <ul><li>Everything in Standard</li><li>5 hours of changes</li><li>Monthly performance report</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <h2>Questions, answered</h2>
+      <details>
+        <summary>Is the price range final?</summary>
+        <p>No, it is an estimate. After a short call we send an exact proposal.</p>
+      </details>
+      <details>
+        <summary>How long does a website take?</summary>
+        <p>A simple site takes about 1-2 weeks. Larger sites take 3-4 weeks or more.</p>
+      </details>
+      <details>
+        <summary>Will I be able to edit the site myself?</summary>
+        <p>Yes. With the CMS option and a short training session, you can edit text and images yourself.</p>
+      </details>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <h2>Let's build your website</h2>
+      <a href="../index.html#contact" class="button">Start a project</a>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <h3>Aurevia Studio</h3>
+    <nav>
+      <a href="../index.html#services">Services</a>
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#pricing">Pricing</a>
+      <a href="../index.html#faq">FAQ</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <small>© 2026 Aurevia Studio. All rights reserved.</small>
+  </footer>
+
+  <script src="../page.js"></script>
+
+  <!-- CALCULATOR: is page ka apna chhota script -->
+  <script>
+    // REPLACE: ye numbers apni qeemat ke hisaab se badlein
+    const PRICE_PER_PAGE = 40;     // har page ki qeemat ($)
+    const RANGE_LOW = 0.85;        // neeche wali hadd: total ka 85%
+    const RANGE_HIGH = 1.2;        // upar wali hadd: total ka 120%
+
+    // cheezein pakdo
+    const pagesInput = document.getElementById("wd-pages");
+    const features = document.querySelectorAll(".wd-feature");
+    const designSelect = document.getElementById("wd-design");
+    const timelineSelect = document.getElementById("wd-timeline");
+    const totalText = document.getElementById("wd-total");
+
+    // qeemat ko 10 ke qareeb karo (jaise 1234 se 1230)
+    function roundTo10(number) {
+      return Math.round(number / 10) * 10;
+    }
+
+    function updateRange() {
+      // pages: kam az kam 1
+      let pages = Number(pagesInput.value);
+      if (pages < 1) pages = 1;
+
+      // base = pages x qeemat
+      let total = pages * PRICE_PER_PAGE;
+
+      // jo features tick hain unki qeemat jodo
+      features.forEach(function (feature) {
+        if (feature.checked) total = total + Number(feature.value);
+      });
+
+      // design level aur timeline se guna karo
+      total = total * Number(designSelect.value) * Number(timelineSelect.value);
+
+      // range banao aur likho
+      const low = roundTo10(total * RANGE_LOW);
+      const high = roundTo10(total * RANGE_HIGH);
+      totalText.textContent = "$" + low + " - $" + high;
+    }
+
+    // jab bhi kuch badle, dobara hisaab karo
+    pagesInput.addEventListener("input", updateRange);
+    designSelect.addEventListener("change", updateRange);
+    timelineSelect.addEventListener("change", updateRange);
+    features.forEach(function (f) { f.addEventListener("change", updateRange); });
+
+    updateRange();   // page khulte hi pehla hisaab
+  </script>
+</body>
+</html>

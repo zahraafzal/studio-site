@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aurevia Studio | Creative Agency</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+      <!-- keyboard walon ke liye: Tab dabane par nazar aata hai -->
+  <a href="#main" class="skip-link">Skip to content</a>
+
+
+  <header>
+    <h2>Aurevia Studio</h2>
+
+  
+    <button class="menu-button" id="menu-button" aria-label="Open menu">☰</button>
+
+    <nav id="menu">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#pricing">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+     <section class="hero" id="main">
+
+    <!-- REPLACE: baad mein apni showreel ka link ya videos/showreel.mp4 -->
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata"
+           poster="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1600&q=70">
+      <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <h1>Videos, brands and websites that get noticed</h1>
+    <p>We edit YouTube videos, build brands and make websites.</p>
+
+    <div class="hero-buttons">
+      <a href="services/youtube-editing.html">See packages</a>
+      <a href="#contact" class="button button-outline">Book a Free Call</a>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div>
+      <h3>500+</h3>
+      <p>Videos edited</p>
+    </div>
+    <div>
+      <h3>120+</h3>
+      <p>Clients</p>
+    </div>
+    <div>
+      <h3>48h</h3>
+      <p>Fastest delivery</p>
+    </div>
+  </section>
+    
+  <section class="marquee-section">
+    <p class="marquee-title">Trusted by creators and brands</p>
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>CHANNEL ONE</span><span>BRAND TWO</span><span>CREATOR THREE</span>
+        <span>STUDIO FOUR</span><span>MEDIA FIVE</span><span>CHANNEL SIX</span>
+        <span>CHANNEL ONE</span><span>BRAND TWO</span><span>CREATOR THREE</span>
+        <span>STUDIO FOUR</span><span>MEDIA FIVE</span><span>CHANNEL SIX</span>
+      </div>
+    </div>
+  </section>
+
+
+    <section class="services" id="services">
+    <h2>What we do</h2>
+    <div class="cards">
+
+      <div class="card">
+        <h3>YouTube Complete Edit Package</h3>
+        <p>Full video editing plus a click-worthy thumbnail.</p>
+        <a href="#pricing">See packages</a>
+      </div>
+
+      <div class="card">
+        <h3>Content Management</h3>
+        <p>Content calendar, scripting help, posting and monthly reports.</p>
+        <a href="services/content-management.html">See plans</a>
+      </div>
+
+      <div class="card">
+        <h3>Personal Branding</h3>
+        <p>Logo, colours, fonts, social media kits and media kit.</p>
+        <a href="services/personal-branding.html">See packages</a>
+      </div>
+
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>Portfolio, business, landing page and e-commerce websites.</p>
+        <a href="services/web-development.html">See details</a>
+      </div>
+
+    </div>
+  </section>
+ 
+     <section class="work-section" id="work">
+    <h2>Recent work</h2>
+
+    
+        <div class="filters">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="youtube">YouTube</button>
+      <button data-filter="branding">Branding</button>
+      <button data-filter="web">Web</button>
+    </div>
+
+   
+    <div class="work-grid">
+      <div class="work" data-cat="youtube" data-video="jNQXAC9IVRw">
+        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=700&q=70" alt="Travel vlog edit">
+        <p>Travel vlog edit</p>
+      </div>
+      <div class="work" data-cat="branding">
+        <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=700&q=70" alt="Coffee brand identity">
+        <p>Coffee brand identity</p>
+      </div>
+      <div class="work" data-cat="web">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=700&q=70" alt="Online store website">
+        <p>Online store</p>
+      </div>
+      <div class="work" data-cat="youtube" data-video="jNQXAC9IVRw">
+        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=700&q=70" alt="Gaming highlights edit">
+        <p>Gaming highlights</p>
+      </div>
+      <div class="work" data-cat="branding">
+        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=700&q=70" alt="Creator social media kit">
+        <p>Creator social kit</p>
+      </div>
+      <div class="work" data-cat="web">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700&q=70" alt="Photographer portfolio website">
+        <p>Photographer portfolio</p>
+      </div>
+    </div>
+  </section>
+   
+     <section class="pricing-section" id="pricing">
+    <h2>YouTube editing packages</h2>
+
+    <div class="price-grid">
+
+      <div class="price-card">
+        <h3>Starter</h3>
+        <p class="price">$49</p>
+        <ul>
+          <li>Video up to 8 min</li>
+          <li>1 thumbnail</li>
+          <li>1 revision</li>
+          <li>4-5 days delivery</li>
+        </ul>
+        <a href="#contact" class="button">Choose Starter</a>
+      </div>
+
+      <div class="price-card popular">
+        <span class="badge">Most Popular</span>
+        <h3>Pro</h3>
+        <p class="price">$99</p>
+        <ul>
+          <li>Video up to 20 min</li>
+          <li>3 thumbnail variants</li>
+          <li>2 revisions</li>
+          <li>1 Shorts cut</li>
+          <li>3-4 days delivery</li>
+        </ul>
+        <a href="#contact" class="button">Choose Pro</a>
+      </div>
+
+      <div class="price-card">
+        <h3>Premium</h3>
+        <p class="price">$199</p>
+        <ul>
+          <li>Video up to 40 min</li>
+          <li>3 variants + 1 redesign</li>
+          <li>3 revisions</li>
+          <li>Priority 2-3 days</li>
+        </ul>
+        <a href="#contact" class="button">Choose Premium</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="compare-section">
+    <h2>Thumbnails that earn the click</h2>
+    <p class="hint">Drag the slider to compare old and new.</p>
+
+    <div class="compare" id="compare">
+      
+      <img class="after-img" src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=1100&q=70" alt="Thumbnail after redesign">
+
+     
+      <img class="before-img" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1100&q=70" alt="Thumbnail before redesign">
+
+      <span class="label label-before">Before</span>
+      <span class="label label-after">After</span>
+
+     
+      <div class="line"></div>
+
+      
+      <input type="range" min="0" max="100" value="50" id="slider" aria-label="Compare before and after">
+    </div>
+  </section>
+  
+  <section class="quote-section" id="quote">
+    <h2>Get an instant quote</h2>
+
+    <div class="quote-box">
+
+      <label>Package</label>
+      <select id="package">
+        <option value="49">Starter ($49)</option>
+        <option value="99" selected>Pro ($99)</option>
+        <option value="199">Premium ($199)</option>
+      </select>
+
+    
+      <label>Number of videos</label>
+      <input type="number" id="videos" min="1" max="50" value="1">
+
+     
+      <p class="addons-title">Add-ons (per video)</p>
+      <label class="check"><input type="checkbox" class="addon" value="30"> Rush delivery +$30</label>
+      <label class="check"><input type="checkbox" class="addon" value="15"> Shorts/Reels +$15</label>
+      <label class="check"><input type="checkbox" class="addon" value="10"> Extra revision +$10</label>
+
+     
+      <div class="total">
+        <span>Estimated total</span>
+        <strong id="total">$99</strong>
+      </div>
+
+    </div>
+  </section>
+   
+  <section class="steps-section">
+    <h2>How it works</h2>
+    <div class="steps">
+
+      <div class="step">
+        <span class="step-number">1</span>
+        <h3>Order</h3>
+        <p>Pick a package and place your order.</p>
+      </div>
+
+      <div class="step">
+        <span class="step-number">2</span>
+        <h3>Upload footage</h3>
+        <p>Send raw files by Google Drive, Dropbox or WeTransfer.</p>
+      </div>
+
+      <div class="step">
+        <span class="step-number">3</span>
+        <h3>Review and request changes</h3>
+        <p>Watch the draft and tell us what to adjust.</p>
+      </div>
+
+      <div class="step">
+        <span class="step-number">4</span>
+        <h3>Download final files</h3>
+        <p>Get your video and thumbnails, ready to publish.</p>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <section class="faq-section" id="faq">
+    <h2>Questions, answered</h2>
+
+    <details>
+      <summary>How do I send my footage?</summary>
+      <p>After ordering you get an upload link. You can also share a Google Drive, Dropbox or WeTransfer link.</p>
+    </details>
+
+    <details>
+      <summary>How many revisions do I get?</summary>
+      <p>Starter includes 1, Pro 2 and Premium 3. Extra revisions are $10 each.</p>
+    </details>
+
+    <details>
+      <summary>How long does delivery take?</summary>
+      <p>Starter 4-5 days, Pro 3-4 days, Premium 2-3 days. Rush orders can be ready in 48 hours.</p>
+    </details>
+
+    <details>
+      <summary>Which payment methods do you accept?</summary>
+      <p>[PLACEHOLDER] Write your payment methods here, for example bank transfer, PayPal or card.</p>
+    </details>
+
+    <details>
+      <summary>Can I get a rush order?</summary>
+      <p>Yes. Add Rush delivery (+$30 per video) in the quote calculator.</p>
+    </details>
+
+    <details>
+      <summary>Who owns the finished work?</summary>
+      <p>You do. Once payment is complete, all final files are yours to use and publish.</p>
+    </details>
+  </section>
+   
+  <section class="reviews-section">
+    <h2>Client reviews</h2>
+    <div class="reviews">
+
+      <div class="review">
+        <p class="stars">★★★★★</p>
+        <p>[PLACEHOLDER] Replace this with a real client review about editing quality.</p>
+        <div class="person">
+          <span class="avatar">AK</span>
+          <div>
+            <strong>Client Name</strong>
+            <small>YouTuber</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="review">
+        <p class="stars">★★★★★</p>
+        <p>[PLACEHOLDER] Replace this with a real client review about delivery speed.</p>
+        <div class="person">
+          <span class="avatar">SM</span>
+          <div>
+            <strong>Client Name</strong>
+            <small>Podcast host</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="review">
+        <p class="stars">★★★★★</p>
+        <p>[PLACEHOLDER] Replace this with a real client review about branding or web work.</p>
+        <div class="person">
+          <span class="avatar">RH</span>
+          <div>
+            <strong>Client Name</strong>
+            <small>Founder</small>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="cta-band">
+    <h2>Let's make something great.</h2>
+    <a href="#contact" class="button">Start your project</a>
+  </section>
+    <!-- CONTACT FORM -->
+  <section class="contact-section" id="contact">
+    <h2>Tell us about your project</h2>
+
+    <form class="contact-form" id="contact-form">
+
+      <label>Name</label>
+      <input type="text" required>
+
+      <label>Email</label>
+      <input type="email" required>
+
+      <label>Service</label>
+      <select>
+        <option>YouTube Complete Edit Package</option>
+        <option>Content Management</option>
+        <option>Personal Branding</option>
+        <option>Web Development</option>
+      </select>
+
+      <label>Budget</label>
+      <select>
+        <option>Under $100</option>
+        <option>$100 - $500</option>
+        <option>$500 - $1,500</option>
+        <option>$1,500+</option>
+      </select>
+
+      <label>Message</label>
+      <textarea rows="4" required></textarea>
+
+      <button type="submit" class="button">Send message</button>
+
+      
+      <p class="success" id="success" hidden>Thanks! Your message is sent. We reply within 24 hours.</p>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <h3>Aurevia Studio</h3>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#pricing">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+        <nav>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="refund-policy.html">Refunds</a>
+      <a href="cookie-policy.html">Cookies</a>
+    </nav>
+    <small>© 2026 Aurevia Studio. All rights reserved.</small>
+  </footer>
+
+  
+  <a class="whatsapp" href="https://wa.me/92XXXXXXXXXX?text=Hi!%20I%20want%20to%20know%20more%20about%20your%20services." target="_blank">WhatsApp</a>
+   
+  <div class="cookie-banner" id="cookie-banner" hidden>
+    <p>We use cookies to improve your experience. You can accept all or keep only the necessary ones.</p>
+    <div class="cookie-buttons">
+      <button class="button" id="cookie-accept">Accept all</button>
+      <button class="cookie-necessary" id="cookie-necessary">Only necessary</button>
+    </div>
+  </div>
+    
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close video">✕</button>
+    <div class="lightbox-box">
+      <iframe id="lightbox-frame" src="" title="Video player" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
+    </div>
+  </div>
+    <!-- phone ka neeche wala bar -->
+  <nav class="mobile-bar" aria-label="Quick actions">
+    <a href="#quote" class="mobile-order">Order</a>
+    <a href="https://wa.me/92XXXXXXXXXX" target="_blank">WhatsApp</a>
+    <button type="button" id="bar-menu">Menu</button>
+  </nav>
+    <script src="script.js"></script>
+</body>
+</html>
+   
