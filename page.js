@@ -1,4 +1,4 @@
-// naye pages ka chhota script: sirf phone ka ☰ menu
+
 const menuButton = document.getElementById("menu-button");
 const menu = document.getElementById("menu");
 
