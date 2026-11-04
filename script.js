@@ -94,7 +94,7 @@ sections.forEach((section) => {
   section.classList.add("fade-in");
   observer.observe(section);
 });
-// ===== STATS COUNT-UP: numbers 0 se upar ginte hain =====
+
 const statNumbers = document.querySelectorAll(".stats h3");
 
 const countObserver = new IntersectionObserver(
@@ -103,18 +103,18 @@ const countObserver = new IntersectionObserver(
       if (!entry.isIntersecting) return;
 
       const el = entry.target;
-      const goal = parseInt(el.textContent); // "500+" se 500
-      const suffix = el.textContent.replace(String(goal), ""); // "+" ya "h"
+      const goal = parseInt(el.textContent); 
+      const suffix = el.textContent.replace(String(goal), ""); 
       const start = performance.now();
 
       function tick(now) {
-        const progress = Math.min((now - start) / 1400, 1); // 0 se 1
+        const progress = Math.min((now - start) / 1400, 1); 
         el.textContent = Math.round(goal * progress) + suffix;
         if (progress < 1) requestAnimationFrame(tick);
       }
       requestAnimationFrame(tick);
 
-      countObserver.unobserve(el); // dobara nahi ginna
+      countObserver.unobserve(el); 
     });
   },
   { threshold: 0.5 },
@@ -123,81 +123,71 @@ const countObserver = new IntersectionObserver(
 statNumbers.forEach(function (el) {
   countObserver.observe(el);
 });
-// ===== COOKIE BANNER =====
+
 const cookieBanner = document.getElementById("cookie-banner");
 const acceptButton = document.getElementById("cookie-accept");
 const necessaryButton = document.getElementById("cookie-necessary");
 
-// ye kaam sirf "Accept all" ke baad chalta hai.
-// REPLACE: yahan baad mein apna analytics (jaise Google Analytics) ka code jorna
 function loadAnalytics() {
   console.log("Analytics yahan load hoga (abhi placeholder hai)");
 }
 
-// pehle dekho ke visitor ne pehle kuch chuna tha ya nahi
 const savedChoice = localStorage.getItem("cookieChoice");
 
 if (savedChoice === null) {
-  cookieBanner.hidden = false; // pehli dafa: banner dikhao
+  cookieBanner.hidden = false; 
 } else if (savedChoice === "all") {
-  loadAnalytics(); // pehle accept kiya tha
+  loadAnalytics(); 
 }
 
-// "Accept all" dabane par
 acceptButton.addEventListener("click", function () {
-  localStorage.setItem("cookieChoice", "all"); // choice yaad rakho
+  localStorage.setItem("cookieChoice", "all"); 
   cookieBanner.hidden = true;
   loadAnalytics();
 });
 
-// "Only necessary" dabane par
 necessaryButton.addEventListener("click", function () {
   localStorage.setItem("cookieChoice", "necessary");
-  cookieBanner.hidden = true; // analytics load nahi hoga
+  cookieBanner.hidden = true; 
 });
-// ===== LIGHTBOX: video popup =====
+
 const lightbox = document.getElementById("lightbox");
 const lightboxFrame = document.getElementById("lightbox-frame");
 const lightboxClose = document.getElementById("lightbox-close");
 const videoCards = document.querySelectorAll(".work[data-video]");
 
-// popup kholo
+
 function openLightbox(videoId) {
   lightboxFrame.src =
     "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
   lightbox.hidden = false;
 }
 
-// popup band karo (src khali karne se video ruk jati hai)
 function closeLightbox() {
   lightbox.hidden = true;
   lightboxFrame.src = "";
 }
 
-// har video wale card par click
 videoCards.forEach(function (card) {
   card.addEventListener("click", function () {
     openLightbox(card.dataset.video);
   });
 });
 
-// X button se band
 lightboxClose.addEventListener("click", closeLightbox);
 
-// kale hissay (video ke bahar) par click se band
 lightbox.addEventListener("click", function (event) {
   if (event.target === lightbox) {
     closeLightbox();
   }
 });
 
-// Escape dabane se band
 document.addEventListener("keydown", function (event) {
   if (event.key === "Escape" && !lightbox.hidden) {
     closeLightbox();
   }
 });
-// phone bar ka "Menu" button: upar wala menu kholo ya band karo
+
 const barMenuButton = document.getElementById("bar-menu");
 
 barMenuButton.addEventListener("click", function () {
